@@ -1,6 +1,10 @@
-<template>
-<h1>Home</h1>
-</template>
+<script lang="ts" setup>
+import { computed } from 'vue';
+import store from '../store';
 
-<script setup>
+const meals = computed(() => store.state.meals)
 </script>
+
+<template>
+<pre>{{ meals }}</pre>
+</template>
