@@ -1,7 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from "./components/Header.vue";
+</script>
 
 <template>
-  <router-view />
+  <v-app>
+    <Header />
+    <main class="content">
+      <router-view />
+    </main>
+  </v-app>
 </template>
 
-<style scoped></style>
+<style scoped>
+.content {
+  margin-top: 70px;
+}
+</style>
